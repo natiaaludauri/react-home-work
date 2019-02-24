@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 
-class Coment extends Component {
+class Comment extends Component {
   render() {
     return (
-      <div>
-        <ul>
-          {this.props.coments.map(coment => (
-            <li key={coment.id}>{coment.body}</li>
+      <div className="allComments p-2">
+        <ul style={{ width: 300 }} className="list-group">
+          {this.props.comments.map(coment => (
+            <li className="list-group-item" key={coment.id}>
+              {coment.body}
+            </li>
           ))}
         </ul>
       </div>
@@ -14,4 +16,4 @@ class Coment extends Component {
   }
 }
 
-export default Coment;
+export default Comment;
